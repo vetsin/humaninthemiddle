@@ -1,0 +1,21 @@
+<div class="row fill" >
+    <div class="col-md-7 fill">
+        <hexedit data="stream" class="fill"></hexedit>
+    </div>
+    <div class="col-md-5 fill">
+        <div>
+            <input type="text" ng-model="end"></input>
+            <button>Freeze Stream</button>
+            <button ng-click="getConfig()">Load Current</button>
+            <button ng-click="apply()">Apply</button>
+            <button ng-click="validatePacket()">Validate</button>
+            <select ng-model="configs.selectedOption" ng-options="name for name in configs.files">
+            </select>
+            <button ng-click="load()">Load</button>
+            <button ng-click="save()">Save</button>
+            <button ng-click="reloadClass()">Reload Class</button>
+            <br />
+            <textarea rows="10" cols="54" ng-model="currentConfig">{'header':null}</textarea>
+        <div>
+    </div>
+</div>

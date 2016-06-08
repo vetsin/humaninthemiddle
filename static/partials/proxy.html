@@ -1,0 +1,55 @@
+<div class="row fill">
+    <div class="col-md-6">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Local Port</th>
+                    <th>Remote Host</th>
+                    <th>Remote Port</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="proxy in proxies">
+                   <td>{{proxy.localPort}}</td> 
+                   <td>{{proxy.remoteHost}}</td> 
+                   <td>{{proxy.remotePort}}</td> 
+                   <td><button class="btn btn-default" ng-click="stop(proxy.localPort)">Stop</button>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Local Port</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="8000">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Remote Host</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="192.168.1.1">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Remote Port</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="80">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Processor</label>
+                <select ng-model="configs.selectedOption" ng-options="test"></select>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Auto Start
+                </label>
+            </div>
+            <button class="btn btn-default">Save</button>
+            <button class="btn btn-default">Delete</button>
+        </form>
+    </div>
+    <div class="col-md-12 fill">
+       <button class="btn btn-default" ng-click="start()" >Start</button> 
+       <button class="btn btn-default" ng-click="stop()" >Stop</button> 
+       <button class="btn btn-default" ng-click="list()" >List</button> 
+       {{test}}
+    </div>
+</div>

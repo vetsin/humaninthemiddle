@@ -1,0 +1,14 @@
+<div class="editor">
+    <div class="scrollbar"></div>
+    <div class="offset">
+        <div ng-repeat="b in stream.data track by $index" ng-if="!(($index) % 16)" data-offset="{{$index}}">
+            {{decimalToHex($index, 8)}}
+        </div>
+    </div>
+    <div class="hex" >
+        <span ng-repeat="b in stream.data track by $index" data-offset="{{$index}}" ng-class="diffClass($index)">{{decimalToHex(b)}}</span>
+    </div>
+    <div class="text">
+        <span ng-repeat="b in stream.data track by $index" data-offset="{{$index}}" ng-class="diffClass($index)">{{decimalToChar(b)}}</span>
+    </div>
+<div>

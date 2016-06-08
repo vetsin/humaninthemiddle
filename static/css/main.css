@@ -1,0 +1,29 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    //min-height: calc(100% - 75px);
+    height: calc(100% - 56px);
+    margin-bottom: 0;
+}
+.fill {
+    height: calc(100% - 10px);
+}
+.nav-tabs {
+    margin-bottom: 5px;
+}
+.navbar-static-top {
+    margin-bottom: 5px;
+}
+
+// /proxy
+
+// /proxy.stream
+
+.stream {
+    overflow: scroll;
+}
+

@@ -1,0 +1,48 @@
+.editor {
+}
+.editor .offset {
+    backgrond: #f7f7f7 none repeat scroll 0 0;
+    color: #777;
+    float: left;
+    padding: 0 8px 0 0;
+    text-align: right;
+}
+.editor .hex {
+    float: left;
+    padding: 0 10px;
+}
+.editor .hex > span {
+    padding: 0 4px;
+    float: left;
+}
+.editor .hex > span:nth-child(16n-8) {
+    margin-right: 8px;
+}
+.editor .hex > span:nth-child(16n+1) {
+    clear: left;
+}
+.editor .hex-match {
+    background: #ccffcc;
+}
+.editor .hex-diff {
+    background: #ffcccc;
+}
+.editor span {
+    display: inline-block;
+    white-space: pre;
+    font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+}
+.editor span:hover {
+    color: #f0f;
+}
+.editor .text {
+    color: #222;
+    float: left;
+    //padding: 0 20px 0 5px;
+}
+.editor .text > span {
+    float: left;
+}
+.editor .text > span:nth-child(16n+1) {
+    clear: left;
+}

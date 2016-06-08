@@ -1,0 +1,8 @@
+<ul class="nav nav-tabs" ng-repeat="proxy in proxies">
+    <li ui-sref="history.view({currentProxy: proxy.localPort, type: 'Local'})" ui-sref-active="active"><a>{{proxy.localPort}} Local</a></li>
+    <li ui-sref="history.view({currentProxy: proxy.localPort, type: 'Remote'})" ui-sref-active="active"><a>{{proxy.localPort}} Remote</a></li>
+</ul>
+<ul class="nav nav-tabs">
+    <li ng-repeat="proxy in proxies track by $index" ui-sref="history.view({currentProxy: proxy.localPort, type: proxy.type})" ui-sref-active="active"><a>:{{proxy.localPort}} {{proxy.type}}</a></li>
+</ul>
+<div style="height: calc(100% - 50px)" ui-view><div>

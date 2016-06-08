@@ -1,0 +1,18 @@
+{
+  "name": "hitm",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "1.4.9",
+    "angular-sanitize": "1.4.9",
+    "angular-bootstrap": "1.1.1",
+    "angular-loading-bar": "~0.8.0",
+    "angular-ui-router": "~0.2.13",
+    "angular-toggle-switch": "~1.3.0",
+    "angular-wamp": "~0.1.8",
+    "bootstrap": "~3.3.6",
+    "oclazyload": "~1.0.9",
+    "angular-ui-router.stateHelper": "~1.3.1",
+    "autobahnjs": "~0.9.9",
+    "angular-rangeslider": "~0.0.14"
+  }
+}

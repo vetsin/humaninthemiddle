@@ -1,0 +1,5 @@
+<ul class="nav nav-tabs" ng-repeat="proxy in proxies">
+    <li ui-sref="raw.view({currentProxy: proxy.localPort})" ui-sref-active="active"><a>{{ proxy.localPort }}</a></li>
+</ul>
+<div ng-if="!proxies.length">No Proxies Set</div>
+<div style="height: calc(100% - 50px)" ui-view><div>

@@ -1,0 +1,46 @@
+<div class="row fill" >
+    <div class="col-md-4">
+    <button ng-click="reprocess()">Re-process Stream</button>
+    <button ng-click="reloadClass()">Reload Class</button>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Size</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="packet in packets" ng-click="setSelected(packet.id)">
+            <th>{{packet.index}}</th>
+            <td>{{packet.start}}</td>
+            <td>{{packet.end}}</td>
+            <td>{{packet.len}}</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+    <div class="col-md-8">
+        <div ng-hide="!selected">
+            <uib-accordion close-others="oneAtATime">
+                <uib-accordion-group heading="Fields" >
+                    <form class="form-horizontal">
+                        <div class="form-group" ng-repeat="header in selected.headers track by $index">
+                            <label for="hdr-{{$index}}" class="col-sm-2 control-label">{{header[0]}}</label>
+                            <div class="col-sm-10">
+                                  <input type="text" class="form-control" id="hdr-{{$index}}" value="{{header[1]}}">
+                            </div>
+                        </div>
+                    </form>
+                </uib-accordion-group>
+                <uib-accordion-group heading="Body" >
+                    <hexedit data="selected.body"></hexedit>
+                </uib-accordion-group>
+                <uib-accordion-group heading="Raw Data" >
+                    <hexedit data="selected"></hexedit>
+                </uib-accordion-group>
+            </uib-accordion>
+        </div>
+    </div>
+</div>

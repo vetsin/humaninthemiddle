@@ -1,0 +1,4 @@
+<ul class="nav nav-tabs">
+    <li ng-repeat="proxy in receivers track by $index" ui-sref="packets.define({currentProxy: proxy.localPort, type: proxy.type})" ui-sref-active="active"><a>{{proxy.localPort}} {{proxy.type}}</a></li>
+</ul>
+<div style="height: calc(100% - 50px)" ui-view><div>
